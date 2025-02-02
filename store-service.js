@@ -1,6 +1,6 @@
-const { publicDecrypt } = require("crypto");
-const fs = require("fs");
-const { resolve } = require("path");
+//const { publicDecrypt } = require('crypto');
+const fs = require('fs');
+//const { resolve } = require('path');
 
 let items = [];
 let categories = [];
@@ -28,10 +28,10 @@ function initialize() {
                     resolve();
                 } catch(err) {
                     reject("Unable to read categories file");
-                    return;
+                    //return;
                 }
-            })
-        })
+            });
+        });
     });
 }
 
@@ -67,3 +67,5 @@ function getCategories() {
         }
     });
 }
+
+module.exports = { initialize, getAllItems, getPublishedItems, getCategories};

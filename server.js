@@ -1,6 +1,22 @@
-const storeService = request('./store-service');
+/*********************************************************************************
+
+WEB322 – Assignment 02
+I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part *  of this assignment has been copied manually or electronically from any other source (including 3rd party web sites) or distributed to other students.
+
+Name: Uny Li (Shiyu)
+Student ID: 152950234 
+Date: 2 Feb 2025
+Cyclic Web App URL: 
+GitHub Repository URL: https://github.com/yuyuUNny/web322-app
+
+********************************************************************************/ 
+
+
+const storeService = require('./store-service');
 
 const express = require('express');
+
+const path = require('path');
 
 const app = express();
 
@@ -17,7 +33,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/shop', (req, res) => {
-  storeService.getPublishedItem()
+  storeService.getPublishedItems()
     .then((data) => res.json(data))
     .catch((err) => res.status(500).json({message: err}));
 });
@@ -46,6 +62,7 @@ storeService.initialize().then(
   }).catch((err) => {
     console.log("Initialized error");
   });
+
 
 
 

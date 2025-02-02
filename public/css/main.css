@@ -1,0 +1,26 @@
+p {
+    font-family: "Comic Neue", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1, h2, .navbar-brand{
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.navbar-brand, .nav-link{
+    font-family: "Righteous", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
